@@ -6,9 +6,10 @@ Extension gives you option to define start and end comments that will be inserte
 
 * Define custom comments
 * Wrapp the code
-* Search folder for predefined regex
+* Search folder for predefined regex, for now only .c/h/py files are searched
 ## Future Features
 * Create log file with the list of the documents were the comments are applied.
+* Add configuration option for type of files
 
 ## Usage
 ### Define start ans end comments
