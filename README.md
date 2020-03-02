@@ -15,7 +15,7 @@ Extension gives you option to define start and end comments that will be inserte
 ### Define start ans end comments
 **Note**, if not defined by user the default ones will be used
 
-![Image of settings](https://raw.githubusercontent.com/huizhougit/githd/master/resources/branch_history.gif)
+![Image of settings](https://github.com/markobanovic/CodeWrapper/blob/master/gifs/Settings.gif)
 
 This extension contributes the following settings:
 
@@ -26,11 +26,11 @@ This extension contributes the following settings:
 ### Wrapp the code
 **Note**, if not defined by user the default ones will be used
 
-![Image of settings](https://raw.githubusercontent.com/huizhougit/githd/master/resources/branch_history.gif)
+![Image of wrapp](https://github.com/markobanovic/CodeWrapper/blob/master/gifs/Wrapp.gif)
 
 ### Search folder for wrapp
 
-![Image of settings](https://raw.githubusercontent.com/huizhougit/githd/master/resources/branch_history.gif)
+![Image of search](https://github.com/markobanovic/CodeWrapper/blob/master/gifs/Search.gif)
 
 ## Release Notes
 
