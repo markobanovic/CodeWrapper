@@ -2,17 +2,13 @@
 	"name": "CodeWrapper",
 	"displayName": "CodeWrapper",
 	"description": "Wrapp selected code in predefined start and end comments.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": {
 		"name": "Marko Banovic",
 		"email": "markobanovic.work@gmail.com"
 	},
 	"publisher": "markobanovic",
 	"icon": "gifs/logo.png",
-	"galleryBanner": {
-		"color": "#0000",
-		"theme": "dark"
-	  },
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/markobanovic/CodeWrapper"
@@ -26,6 +22,7 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.codeWrapperWrapp",
+		"onCommand:extension.codeWrapperWrappPython",
 		"onCommand:extension.codeWrapperSearch",
 		"onCommand:extension.codeWrapperLog"
 	],
@@ -35,6 +32,10 @@
 			{
 				"command": "extension.codeWrapperWrapp",
 				"title": "Code Wrapper Wrapp"
+			},
+			{
+				"command": "extension.codeWrapperWrappPython",
+				"title": "Code Wrapper Wrapp Python"
 			},
 			{
 				"command": "extension.codeWrapperSearch",
@@ -58,10 +59,25 @@
 				"default": "/*</patch>*/",
 				"description": "End wraper template"
 			  },
+			  "codeWrapper.wrapperStartPython": {
+				"type": "string",
+				"default": "#/*<patch team='<ODIN-INT-VP>' by='<eMBA>' approved='Yes' reason='<write here...>'>*/",
+				"description": "Start wraper tamplate"
+			  },
+			  "codeWrapper.wrapperEndPython": {
+				"type": "string",
+				"default": "#/*</patch>*/",
+				"description": "End wraper template"
+			  },
 			  "codeWrapper.wrapperSearchExpression": {
 				"type": "string",
 				"default": "<patch team=",
 				"description": "Search expression template"
+			  },
+			  "codeWrapper.wrapperSearchFileTypes": {
+				"type": "string",
+				"default": "*.c,*.h,*.py",
+				"description": "Search file types template"
 			  }
 		    }
 

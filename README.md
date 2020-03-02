@@ -21,7 +21,10 @@ This extension contributes the following settings:
 
 * `codeWrapper.wrapperStart`: define the start comment or the default one will be used
 * `codeWrapper.wrapperEnd`: define the end comment or the default one will be used
+* `codeWrapper.wrapperStartPython`: define the start comment or the default one will be used
+* `codeWrapper.wrapperEndPython`: define the end comment or the default one will be used
 * `codeWrapper.wrapperSearchExpression`: define the end comment or the default one will be used
+* `codeWrapper.wrapperSearchFileTypes`: define the end comment or the default one will be used
 
 ### Wrapp the code
 **Note**, if not defined by user the default ones will be used
@@ -34,7 +37,7 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.3
 
 Initial release of Code Wrapper
 

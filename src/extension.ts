@@ -31,15 +31,37 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	});
 
+	let disposableWrappPython = vscode.commands.registerCommand('extension.codeWrapperWrappPython', () => {
+		// The code you place here will be executed every time your command is executed
+		// Check if the editor exist
+		const editor = vscode.window.activeTextEditor;
+		if(!editor) {
+			vscode.window.showErrorMessage("Editor does not exist");
+			return;
+		}
+		//Get the selected code
+		const originalCode = editor.document.getText(editor.selection);
+		//Get the user configured wrrapers
+		const wrapperStart = vscode.workspace.getConfiguration('codeWrapper').get('wrapperStartPython');
+		const wrappedEnd = vscode.workspace.getConfiguration('codeWrapper').get('wrapperEndPython');
+		//Create wrapped code
+		const wrappedCode = `\n${wrapperStart}\n${originalCode}\n${wrappedEnd}\n`;
+		//Replace the selected code with wrapped one
+		editor.edit(edit => {
+			edit.replace(editor.selection, wrappedCode);
+		});
+	});
+
 	let disposableSearch = vscode.commands.registerCommand('extension.codeWrapperSearch', () => {
 		// The code you place here will be executed every time your command is executed
 		// Get the user configured expression
 		const wrapperSearchExpression = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchExpression');
+		const wrapperSearchFileTypes = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchFileTypes');
 		// Search the workspace for wrappers
 		vscode.commands.executeCommand('workbench.action.findInFiles', {
 			query: wrapperSearchExpression,
 			triggerSearch: true,
-			filesToInclude: "*.c,*.h,*.py",
+			filesToInclude: wrapperSearchFileTypes,
 			isRegex: true,
 		});
 	});
@@ -48,11 +70,12 @@ export function activate(context: vscode.ExtensionContext) {
 		// The code you place here will be executed every time your command is executed
 		// Get the user configured expression
 		const wrapperSearchExpression = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchExpression');
+		const wrapperSearchFileTypes = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchFileTypes');
 		// Search the workspace for wrappers
 		vscode.commands.executeCommand('workbench.action.findInFiles', {
 			query: wrapperSearchExpression,
 			triggerSearch: true,
-			filesToInclude: "*.c,*.h,*.py",
+			filesToInclude: wrapperSearchFileTypes,
 			isRegex: true,
 		});
 
@@ -74,6 +97,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposableWrapp);
+	context.subscriptions.push(disposableWrappPython);
 	context.subscriptions.push(disposableSearch);
 	context.subscriptions.push(disposableLog);
 }
