@@ -8,6 +8,11 @@
 		"email": "markobanovic.work@gmail.com"
 	},
 	"publisher": "markobanovic",
+	"icon": "gifs/logo.png",
+	"galleryBanner": {
+		"color": "#0000",
+		"theme": "dark"
+	  },
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/markobanovic/CodeWrapper"
