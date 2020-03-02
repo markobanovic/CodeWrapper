@@ -2,7 +2,7 @@
 	"name": "CodeWrapper",
 	"displayName": "CodeWrapper",
 	"description": "Wrapp selected code in predefined start and end comments.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": {
 		"name": "Marko Banovic",
 		"email": "markobanovic.work@gmail.com"
