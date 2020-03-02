@@ -3,6 +3,16 @@
 	"displayName": "CodeWrapper",
 	"description": "Wrapp selected code in predefined start and end comments.",
 	"version": "0.0.1",
+	"author": {
+		"name": "Marko Banovic",
+		"email": "markobanovic.work@gmail.com"
+	},
+	"publisher": "markobanovic",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/markobanovic/CodeWrapper"
+	},
+	"homepage": "https://github.com/markobanovic/CodeWrapper/blob/master/README.md",
 	"engines": {
 		"vscode": "^1.42.0"
 	},
