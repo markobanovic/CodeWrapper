@@ -13,8 +13,8 @@ Extension gives you option to define start and end comments that will be inserte
 * Create log file with the list of the documents were the comments are applied.
 
 ## Usage
-### Define start ans end comments
-**Note**, if not defined by user the default ones will be used
+### Define start and end comments
+**Note**: If not defined by user the default settings will be used
 
 ![Image of settings](gifs/Settings.gif)
 
@@ -28,17 +28,28 @@ This extension contributes the following settings:
 * `codeWrapper.wrapperSearchFileTypes`: define the end comment or the default one will be used
 
 ### Wrapp the code
-**Note**, if not defined by user the default ones will be used
+**Note**: If not defined by user the default settings will be used
 
 ![Image of wrapp](gifs/Wrapp.gif)
 
 ### Search folder for wrapp
+**Note**: If not defined by user the default settings will be used
 
 ![Image of search](gifs/Search.gif)
 
+## Keyboard Shortcuts
+
+This extension defines the following keyboard shurcuts:
+
+* Code Wrapp `Ctrl+Alt+W`
+* Code Wrapp Python `Ctrl+Alt+P`
+* Code Wrapp Search `Ctrl+Alt+S`
+
+They can be redefined, more at [Visual Studio Code Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings).
+
 ## Release Notes
 
-### 0.0.5
+### 0.0.6
 
 Initial release of Code Wrapper
 

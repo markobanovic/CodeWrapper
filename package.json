@@ -2,7 +2,7 @@
 	"name": "CodeWrapper",
 	"displayName": "CodeWrapper",
 	"description": "Wrapp selected code in predefined start and end comments.",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"author": {
 		"name": "Marko Banovic",
 		"email": "markobanovic.work@gmail.com"
@@ -46,6 +46,23 @@
 				"title": "Code Wrapper Log"
 			}
 		],
+        "keybindings": [
+            {
+                "command": "extension.codeWrapperWrapp",
+                "key": "ctrl+alt+w",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.codeWrapperWrappPython",
+                "key": "ctrl+alt+p",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.codeWrapperSearch",
+                "key": "ctrl+alt+s",
+                "when": "editorFocus"
+            }
+        ],
 		"configuration": {
 			"title": "CodeWrapper",
 			"properties": {
@@ -80,7 +97,6 @@
 				"description": "Search file types template"
 			  }
 		    }
-
 		}
 	},
 	"scripts": {
