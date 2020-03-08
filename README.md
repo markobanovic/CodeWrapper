@@ -7,10 +7,11 @@ Extension gives you option to define start and end comments that will be inserte
 * Define custom comments
 * Wrapp the code
 * Search folder for predefined regex
+* Create log file based on current search results
 
 ## Future Planed Features
 
-* Create log file with the list of the documents were the comments are applied.
+* Opened for suggestions
 
 ## Usage
 ### Define start and end comments
@@ -37,6 +38,12 @@ This extension contributes the following settings:
 
 ![Image of search](gifs/Search.gif)
 
+### Create log file based on search results
+**Note**: The file need to be saved in desired location (default is opened folder)
+
+![Image of search](gifs/Log.gif)
+
+
 ## Keyboard Shortcuts
 
 This extension defines the following keyboard shurcuts:
@@ -44,12 +51,13 @@ This extension defines the following keyboard shurcuts:
 * Code Wrapp `Ctrl+Alt+W`
 * Code Wrapp Python `Ctrl+Alt+P`
 * Code Wrapp Search `Ctrl+Alt+S`
+* Code Wrapp Log `Ctrl+Alt+L`
 
 They can be redefined, more at [Visual Studio Code Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings).
 
 ## Release Notes
 
-### 0.0.6
+### 0.0.7
 
 Initial release of Code Wrapper
 

@@ -68,30 +68,22 @@ export function activate(context: vscode.ExtensionContext) {
 
 	let disposableLog = vscode.commands.registerCommand('extension.codeWrapperLog', () => {
 		// The code you place here will be executed every time your command is executed
-		// Get the user configured expression
-		const wrapperSearchExpression = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchExpression');
-		const wrapperSearchFileTypes = vscode.workspace.getConfiguration('codeWrapper').get('wrapperSearchFileTypes');
-		// Search the workspace for wrappers
-		vscode.commands.executeCommand('workbench.action.findInFiles', {
-			query: wrapperSearchExpression,
-			triggerSearch: true,
-			filesToInclude: wrapperSearchFileTypes,
-			isRegex: true,
-		});
-
-		// TODO  See how to get the search data
-
+		vscode.commands.executeCommand('search.action.copyAll');
 		// Create Log file, write the info in it and open the file
-		const newFile = vscode.Uri.parse('untitled:' + path.join(vscode.workspace.workspaceFolders![0].toString(), 'Log.txt'));
+		const today = new Date();
+		const logFileName = "Log_" + today.getHours() + today.getMinutes() + today.getSeconds() + today.getMilliseconds();
+		const newFile = vscode.Uri.parse('untitled:' + path.join(vscode.workspace.workspaceFolders![0].uri.fsPath, logFileName ));
 		vscode.workspace.openTextDocument(newFile).then(async document => {
 			const edit = new vscode.WorkspaceEdit();
-			edit.insert(newFile, new vscode.Position(0, 0), "Search Data!");
+			edit.insert(newFile, new vscode.Position(0, 0),"");
 			const success = await vscode.workspace.applyEdit(edit);
 			if (success) {
-				vscode.window.showTextDocument(document);
+				vscode.window.showTextDocument(document).then(() => {
+					vscode.commands.executeCommand('editor.action.clipboardPasteAction');
+				});
 			}
 			else {
-				vscode.window.showInformationMessage('Error!');
+				vscode.window.showErrorMessage('Error!');
 			}
 		});
 	});
