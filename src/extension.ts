@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 		const wrapperStart = vscode.workspace.getConfiguration('codeWrapper').get('wrapperStart');
 		const wrappedEnd = vscode.workspace.getConfiguration('codeWrapper').get('wrapperEnd');
 		//Create wrapped code
-		const wrappedCode = `\n${wrapperStart}\n${originalCode}\n${wrappedEnd}\n`;
+		const wrappedCode = `${wrapperStart}\n${originalCode}\n${wrappedEnd}`;
 		//Replace the selected code with wrapped one
 		editor.edit(edit => {
 			edit.replace(editor.selection, wrappedCode);
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		const wrapperStart = vscode.workspace.getConfiguration('codeWrapper').get('wrapperStartPython');
 		const wrappedEnd = vscode.workspace.getConfiguration('codeWrapper').get('wrapperEndPython');
 		//Create wrapped code
-		const wrappedCode = `\n${wrapperStart}\n${originalCode}\n${wrappedEnd}\n`;
+		const wrappedCode = `${wrapperStart}\n${originalCode}\n${wrappedEnd}`;
 		//Replace the selected code with wrapped one
 		editor.edit(edit => {
 			edit.replace(editor.selection, wrappedCode);
