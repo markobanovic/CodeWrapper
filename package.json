@@ -46,60 +46,60 @@
 				"title": "Code Wrapper Log"
 			}
 		],
-        "keybindings": [
-            {
-                "command": "extension.codeWrapperWrapp",
-                "key": "ctrl+alt+w",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "extension.codeWrapperWrappPython",
-                "key": "ctrl+alt+p",
-                "when": "editorTextFocus"
-            },
-            {
-                "command": "extension.codeWrapperSearch",
-                "key": "ctrl+alt+s"
-            },
-            {
-                "command": "extension.codeWrapperLog",
-                "key": "ctrl+alt+l"
-            }
-        ],
+		"keybindings": [
+			{
+				"command": "extension.codeWrapperWrapp",
+				"key": "ctrl+alt+w",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.codeWrapperWrappPython",
+				"key": "ctrl+alt+p",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.codeWrapperSearch",
+				"key": "ctrl+alt+s"
+			},
+			{
+				"command": "extension.codeWrapperLog",
+				"key": "ctrl+alt+l"
+			}
+		],
 		"configuration": {
 			"title": "CodeWrapper",
 			"properties": {
-			  "codeWrapper.wrapperStart": {
-				"type": "string",
-				"default": "/*<patch by='<write here...>' JIRA='<write here...>' reason='<write here...>'>*/",
-				"description": "Start wraper tamplate"
-			  },
-			  "codeWrapper.wrapperEnd": {
-				"type": "string",
-				"default": "/*</patch>*/",
-				"description": "End wraper template"
-			  },
-			  "codeWrapper.wrapperStartPython": {
-				"type": "string",
-				"default": "#/*<patch by='<write here...>' JIRA='<write here...>' reason='<write here...>'>*/",
-				"description": "Start wraper tamplate"
-			  },
-			  "codeWrapper.wrapperEndPython": {
-				"type": "string",
-				"default": "#/*</patch>*/",
-				"description": "End wraper template"
-			  },
-			  "codeWrapper.wrapperSearchExpression": {
-				"type": "string",
-				"default": "<patch team=",
-				"description": "Search expression template"
-			  },
-			  "codeWrapper.wrapperSearchFileTypes": {
-				"type": "string",
-				"default": "*.c,*.h,*.py",
-				"description": "Search file types template"
-			  }
-		    }
+				"codeWrapper.wrapperStart": {
+					"type": "string",
+					"default": "/*<patch by='<write here...>' JIRA='<write here...>' reason='<write here...>'>*/",
+					"description": "Start wraper tamplate"
+				},
+				"codeWrapper.wrapperEnd": {
+					"type": "string",
+					"default": "/*</patch>*/",
+					"description": "End wraper template"
+				},
+				"codeWrapper.wrapperStartPython": {
+					"type": "string",
+					"default": "#/*<patch by='<write here...>' JIRA='<write here...>' reason='<write here...>'>*/",
+					"description": "Start wraper tamplate"
+				},
+				"codeWrapper.wrapperEndPython": {
+					"type": "string",
+					"default": "#/*</patch>*/",
+					"description": "End wraper template"
+				},
+				"codeWrapper.wrapperSearchExpression": {
+					"type": "string",
+					"default": "<patch team=",
+					"description": "Search expression template"
+				},
+				"codeWrapper.wrapperSearchFileTypes": {
+					"type": "string",
+					"default": "*.c,*.h,*.py",
+					"description": "Search file types template"
+				}
+			}
 		}
 	},
 	"scripts": {
@@ -111,16 +111,16 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.1",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.42.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.18.0",
-		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.0",
+		"@types/node": "^14.14.25",
+		"@types/vscode": "^1.52.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.2",
+		"@typescript-eslint/parser": "^4.14.2",
+		"eslint": "^7.19.0",
 		"glob": "^7.1.6",
-		"mocha": "^7.0.1",
-		"typescript": "^3.7.5",
-		"vscode-test": "^1.3.0"
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
 	}
 }
