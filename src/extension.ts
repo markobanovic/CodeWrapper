@@ -49,7 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
 		//Replace the selected code with wrapped one
 		editor.edit(edit => {
 			edit.replace(editor.selection, wrappedCode);
-		});
+	});
 	});
 
 	let disposableSearch = vscode.commands.registerCommand('extension.codeWrapperSearch', () => {
@@ -81,7 +81,7 @@ export function activate(context: vscode.ExtensionContext) {
 				vscode.window.showTextDocument(document).then(() => {
 					vscode.commands.executeCommand('editor.action.clipboardPasteAction');
 				});
-			}
+}
 			else {
 				vscode.window.showErrorMessage('Error!');
 			}
